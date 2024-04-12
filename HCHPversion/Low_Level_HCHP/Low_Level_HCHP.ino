@@ -85,6 +85,14 @@ void setup() {
   Timer3.resume();     // ADC and control update
   Timer4.resume();     // Sending PC update
   delay(5); 
+
+  /******* THis is to initialize the filter window to avoid the mutation of the raw torque sensor feedback *****/
+//  for(int i=0; i<10; i++) {
+//    getADCaverage(1); 
+//    MovingAverageFilter(TorqueSensorL,3);
+//    MovingAverageFilter(TorqueSensorR,3);
+//  }
+//  starttime = millis();
 }
 
 

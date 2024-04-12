@@ -165,6 +165,8 @@ void Control_Init(void) {
   minInterTorqueL = 0.98*(2.5-TorqueSensorL_Offset)*TorqueSensorL_Sensitivity;  // restriction of the minimum allowable assistive torque of left hip considering safety and torque sensor feedback
   maxInterTorqueR = 0.98*(2.5-TorqueSensorR_Offset)*TorqueSensorR_Sensitivity;  // restriction of the maximum allowable assistive torque of right hip considering safety and torque sensor feedback
   minInterTorqueR = 0.98*(0-TorqueSensorR_Offset)*TorqueSensorR_Sensitivity;    // restriction of the minimum allowable assistive torque of right hip considering safety and torque sensor feedback
+
+  MotorPWMoutput(PWM_commandL,PWM_commandR); 
 }
 
 /**

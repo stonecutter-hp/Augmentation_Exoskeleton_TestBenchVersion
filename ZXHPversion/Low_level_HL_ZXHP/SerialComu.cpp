@@ -455,6 +455,7 @@ void sendDatatoPC() {
     else if(mode == Lowering) {inter = 4;}
     else if(mode == Grasping) {inter = 5;}
     else if(mode == Lifting) {inter = 6;}
+    else if(mode == StopState) {inter = 0;}
     USART_TX_BUF[position++] = inter+48;
     // AsymSide
     if(side == none) {inter = 0;}
@@ -480,8 +481,8 @@ int32_t Calcu_Pow(int8_t m, int8_t n) {
   int32_t result = 1;  
   while(n--) result*=m;    
   return result;  
-}
-
+}  
+  
 /**
  * @param double - data to judge for sign
  * @return signed char - the sign of the value
@@ -493,3 +494,4 @@ int8_t Value_sign(double data)
   else
     return -1;
 }
+

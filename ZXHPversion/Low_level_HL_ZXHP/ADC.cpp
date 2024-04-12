@@ -203,6 +203,7 @@ void Filter_Init() {
  * Mean Moving filter for the ADC value within certain cycles
  * @param int - channel: 0~ENABLED_CH-1
  * @param int - cycles: 1~FilterCycles
+ * ATTENTION: When using the moving mean filter, the initial value in the filter window should be initialized before the main loop to ensure no mutation of the filtered feedabck
  */
 void MovingAverageFilter(int channel, int cycles) {
   double interValue;
